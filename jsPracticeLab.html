@@ -9,11 +9,11 @@
 	// It is possible you have seen this before -- if so, that's fine, if not, that's fine, too
 
 	// Output..
-	alert("hello");
+	// alert("hello");
 	console.log("hello in console");
 
 	function displayInformation () {
-		document.querySelector('h1').innerHTML = "A name";
+		document.querySelector('h1').innerHTML = "Megan";
 		document.querySelector("#URL").innerHTML = document.documentURI; // URI means something like URL -- slight differences for specificity
 		document.querySelector('#items').innerHTML = document.getElementsByTagName('li').length
 		document.querySelector('#time').innerHTML = new Date();
@@ -28,13 +28,23 @@
 		document.querySelector('#cheer').innerHTML += "Go blue!<br>"
 	}
 
+	function copyFunction2() {
+		document.querySelector('#cheer').innerHTML += "O Canada<br>"
+	}
+
 	function handleClick(){
 		alert("hello");
 	}
+
+	// Next function is newly coded for the last question of the JavaScript section of the README. 
+	function springClick(){
+		alert("March 20, 2019")
+	}
+
 </script>
 <style>
 p{
-	background-color: #b3b3b3;
+	background-color: #008080;
 	border: 3px solid #FFFFFF;
 	padding: 3%;
 	font-size: 1.1em;
@@ -62,7 +72,7 @@ p{
 	<ul>
 		<li>Kent State</li>
 		<li>University of Pittsburgh</li>
-		<li>McGill University</li>
+		<li oncopy="copyFunction2()">McGill University</li>
 		<li>California State University Long Beach</li>
 		<li oncopy="copyFunction()">University of Michigan</li>
 	</ul>
@@ -71,6 +81,9 @@ p{
 	</div>
 
 	<button onclick=handleClick() id="wow-button">Wow</button>
+
+<!-- 	The button below is newly coded for the last question of the JavaScript section of the README. -->
+	<button onClick=springClick() id = "springButton">Spring Equinox 2019</button>
 
 </body>
 </html>
